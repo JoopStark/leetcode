@@ -4,7 +4,8 @@ string = 'PAYPALISHIRING'
 solution = Solution()
 
 print("case 1")
-print("solution = PAHNAPLSIIGYIR")
+print("solution =") 
+print("PAHNAPLSIIGYIR")
 answer = solution.convert(string, 3)
 print(answer)
 print(answer == "PAHNAPLSIIGYIR")
