@@ -17,6 +17,9 @@ class Solution():
         if negative:
             result *= -1
 
+        if result > 2 ** 31 - 1:
+            return 0
+
         return result
 
 
