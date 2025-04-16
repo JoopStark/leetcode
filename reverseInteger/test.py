@@ -1,3 +1,5 @@
+from solution import *
+
 solution = Solution()
 answer = solution.reverse(123)
 print("Case 1")
@@ -18,6 +20,6 @@ answer = solution.reverse(120)
 print("Case 3")
 print("---")
 print("Solution:")
-print(120)
+print(21)
 print(answer)
 
