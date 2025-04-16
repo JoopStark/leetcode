@@ -1,4 +1,3 @@
-#
 
 class Solution():
     def reverse(self, x: int) -> int:
@@ -13,12 +12,15 @@ class Solution():
             result *= 10     
             result += x % 10
             x = x // 10
-        
-        if negative:
-            result *= -1
 
+            
+        print(result)
+        print(2 ** 31 - 1)
         if result > 2 ** 31 - 1:
             return 0
+ 
+        if negative:
+            result *= -1
 
         return result
 

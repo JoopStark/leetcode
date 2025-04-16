@@ -23,3 +23,12 @@ print("Solution:")
 print(21)
 print(answer)
 
+
+print("-------------------")
+answer = solution.reverse(1563847412)
+print("Case 4")
+print("---")
+print("Solution:")
+print(0)
+print(answer)
+
