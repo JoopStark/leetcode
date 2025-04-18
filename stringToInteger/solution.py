@@ -1,7 +1,7 @@
 
 
 class Solution():
-    def atoi(self, s: str) -> int:
+    def myAtoi(self, s: str) -> int:
         number_dict = {
                 "0": 0,
                 "1": 1,
@@ -27,6 +27,7 @@ class Solution():
             elif i in number_dict:
                 result *= 10
                 result += number_dict[i]
+                is_int = True
             else:
                 break
         
