@@ -1,8 +1,9 @@
 from solution import *
 
 answers = [
-        [[1,8,6,2,5,4,8,3,7], 49],
-        [[1,1], 1],
+        [3749, "MMMDCCXLIX"],
+        [58, "LVIII"],
+        [1994, "MCMXCIV"]
         ]
 
 
@@ -10,8 +11,8 @@ answers = [
 for i in range(len(answers)):
     print(f"Case {i}")
     print("Solution:")
+    print(Solution().intToRoman(answers[i][0]))
     print(answers[i][1])
-    print(Solution().maxArea(answers[i][0]))
     print("----------------")
     print()
 

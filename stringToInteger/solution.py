@@ -1,5 +1,3 @@
-
-
 class Solution():
     def myAtoi(self, s: str) -> int:
         number_dict = {
@@ -24,13 +22,21 @@ class Solution():
                 is_negative = True
             elif " " == i and is_negative == False and is_int == False:
                 next
+            elif "+" == i and is_negative == False and is_int == False:
+                next
             elif i in number_dict:
                 result *= 10
                 result += number_dict[i]
                 is_int = True
             else:
                 break
-        
+
+        if is_negative and result > (2 ** 32):
+            result = (2 ** 31)
+
+        if is_negative == False and result > ((2 ** 32) - 1):
+            result = ((2 ** 31 ) -1)
+
         if is_negative:
             result *= -1
 
