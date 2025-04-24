@@ -16,13 +16,16 @@ class Solution():
         result = 0
         is_int = False
         is_negative = False
+        sign_count = 0
 
         for i in s:
-            if "-" == i and is_negative == False and is_int == False:
+            if "-" == i and sign_count == 0 and is_int == False:
                 is_negative = True
-            elif " " == i and is_negative == False and is_int == False:
+                sign_count += 1
+            elif " " == i and sign_count == 0 and is_int == False:
                 next
-            elif "+" == i and is_negative == False and is_int == False:
+            elif "+" == i and sign_count == 0 and is_int == False:
+                sign_count += 1
                 next
             elif i in number_dict:
                 result *= 10
@@ -31,10 +34,10 @@ class Solution():
             else:
                 break
 
-        if is_negative and result > (2 ** 32):
+        if is_negative and result > (2 ** 31):
             result = (2 ** 31)
-
-        if is_negative == False and result > ((2 ** 32) - 1):
+    
+        if is_negative == False and result > ((2 ** 31) - 1):
             result = ((2 ** 31 ) -1)
 
         if is_negative:
