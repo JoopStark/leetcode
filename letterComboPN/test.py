@@ -8,11 +8,12 @@ answers = [
 
 
 
-for answer in answers:
+for i in range(len(answers)):
+    answer = answers[i]
     print(f"Case {i}")
     print("Solution:")
     print(answer[1])
-    print(Solution().threeSum(answer[0]))
+    print(Solution().letterCombinations(answer[0]))
     print("----------------")
     print()
 
